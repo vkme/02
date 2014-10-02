@@ -1,0 +1,75 @@
+<HTML>
+<HEAD>
+<TITLE>黑客帝国" text="点击实体词" target="_blank" href="http://www.so.com/s?q=%E9%BB%91%E5%AE%A2%E5%B8%9D%E5%9B%BD&ie=utf-8&src=wenda_link">黑客帝国</TITLE>
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+</HEAD>
+
+<BODY bgcolor=black>
+<script language="JavaScript">
+<!-- 
+if (document.all){
+Cols=40;          //条形串的数量
+Cl=5;                //下落的条形数字长度
+Cs=40;            //条形串之间的左右距离
+Ts=20;             //下落字体的大小
+Tc='#008800'; //条形数字上方串的字体颜色
+Tc1='#00ff00'; //条形数字最后一个数字的颜色
+MnS=3;           //最小速度
+MxS=10;          //最大速度
+I=Cs;
+Sp=new Array();S=new Array();Y=new Array();
+C=new Array();M=new Array();B=new Array();
+RC=new Array();E=new Array();Tcc=new Array(0,1);
+document.write("<div id='Container' style='position:absolute;top:0;left:-"+Cs+"'>");
+document.write("<div style='position:relative'>");
+for(i=0; i < Cols; i++){
+S[i]=I+=Cs;
+document.write("<div id='A' style='position:absolute;top:0;font-family:Arial;font-size:"
++Ts+"px;left:"+S[i]+";width:"+Ts+"px;height:0px;color:"+Tc+";visibility:hidden'></div>");
+}
+document.write("</div></div>");
+
+for(j=0; j < Cols; j++){
+RC[j]=1+Math.round(Math.random()*Cl); 
+Y[j]=0;
+Sp[j]=Math.round(MnS+Math.random()*MxS); 
+for(i=0; i < RC[j]; i++){
+B[i]='';
+C[i]=Math.round(Math.random()*1)+' ';
+M[j]=B[0]+=C[i];
+}
+}
+function Cycle(){
+Container.style.top=window.document.body.scrollTop;
+for (i=0; i < Cols; i++){
+var r = Math.floor(Math.random()*Tcc.length);
+E[i] = '<font color='+Tc1+'>'+Tcc[r]+'</font>';
+Y[i]+=Sp[i];
+
+if (Y[i] > window.document.body.clientHeight){
+for(i2=0; i2 < Cols; i2++){
+RC[i2]=1+Math.round(Math.random()*Cl); 
+for(i3=0; i3 < RC[i2]; i3++){
+B[i3]='黑客数字雨';
+C[i3]=Math.round(Math.random()*1)+' ';
+C[Math.floor(Math.random()*i2)]='&nbsp;'+' ';
+M[i]=B[0]+=C[i3];
+Y[i]=-Ts*M[i].length/1.5;
+A[i].style.visibility='visible';
+}
+Sp[i]=Math.round(MnS+Math.random()*MxS);
+}
+}
+A[i].style.top=Y[i];
+A[i].innerHTML=M[i]+' '+E[i]+' ';
+}
+setTimeout('Cycle()',20)
+}
+Cycle();
+}
+</script>
+</BODY>
+</HTML>
